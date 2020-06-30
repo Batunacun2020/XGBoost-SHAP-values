@@ -18,52 +18,52 @@ This example software is part of my research work in Germany at Zalf Müncheberg
 disdens: distance to dense grass  
 dismode: distance to moderately dense grass  
 dissparse: distance to sparse grass  
-sheep: sheep density  
-disunused: distance to unused land  
-prec: precipitation
-disforest: distance to forest
-gdp: GDP density
-urban: distance to urban
-dem: DEM
-slope: slope
-mine: distance to mine
-temp: temperature
-discrop: distance to cropland
-desertPolicy: policy setting, dummy variable
-road: distance to road
-water: distance to  water
-pop: population density
-rural: distance to rural area
-aspect: aspect
+sheep: sheep density    
+disunused: distance to unused land    
+prec: precipitation  
+disforest: distance to forest  
+gdp: GDP density  
+urban: distance to urban  
+dem: DEM  
+slope: slope  
+mine: distance to mine  
+temp: temperature  
+discrop: distance to cropland  
+desertPolicy: policy setting, dummy variable  
+road: distance to road  
+water: distance to  water  
+pop: population density  
+rural: distance to rural area  
+aspect: aspect  
 
 
 ##Model output:
 
-========================= Oversampling ============================
-items before over sampling: [(0.0, 18190), (1.0, 1810)]
-items after over sampling: [(0.0, 18190), (1.0, 18190)]
-====================== Logistic Regression ========================
-Testing score     : 0.6880726303514909
-Training score    : 0.6938951341593501
-Testing score1    : 0.6880726303514909
-Testing precision : 0.6802241793434748
-Testing recall    : 0.7084723148765844
-kappa             : 0.3761745858219654
-F1 score          : 0.694061
-ROC AUC           : 0.749781
-area under PR     : 0.761540
-============================= XGBoost =============================
-Testing score     : 0.9789272030651341
-Training score    : 0.9809222942479692
-Testing score1    : 0.9789272030651341
-Testing precision : 0.9665312753858651
-Testing recall    : 0.9921614409606404
-kappa             : 0.9578556504852656
-F1 score          : 0.979179
-ROC AUC           : 0.997841
-area under PR     : 0.997592
+========================= Oversampling ============================  
+items before over sampling: [(0.0, 18190), (1.0, 1810)]  
+items after over sampling: [(0.0, 18190), (1.0, 18190)]  
+====================== Logistic Regression ========================  
+Testing score     : 0.6880726303514909  
+Training score    : 0.6938951341593501  
+Testing score1    : 0.6880726303514909  
+Testing precision : 0.6802241793434748  
+Testing recall    : 0.7084723148765844  
+kappa             : 0.3761745858219654  
+F1 score          : 0.694061  
+ROC AUC           : 0.749781  
+area under PR     : 0.761540  
+============================= XGBoost =============================  
+Testing score     : 0.9789272030651341  
+Training score    : 0.9809222942479692  
+Testing score1    : 0.9789272030651341  
+Testing precision : 0.9665312753858651  
+Testing recall    : 0.9921614409606404  
+kappa             : 0.9578556504852656  
+F1 score          : 0.979179  
+ROC AUC           : 0.997841  
+area under PR     : 0.997592  
 
-============================== SHAP ===============================
+============================== SHAP ===============================  
 
 ![shap](shape2.png)
 
