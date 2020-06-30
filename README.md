@@ -15,11 +15,11 @@ Furthermore, the SHAP library was used for the statistical analysis of xgb in th
 This example software is part of my research work in Germany at Zalf Müncheberg and is aimed at stimulating the study of the methodology of machine learning.
 
 ##Data description
-disdens: distance to dense grass
-dismode: distance to moderately dense grass
-dissparse: distance to sparse grass
-sheep: sheep density
-disunused: distance to unused land
+disdens: distance to dense grass  
+dismode: distance to moderately dense grass  
+dissparse: distance to sparse grass  
+sheep: sheep density  
+disunused: distance to unused land  
 prec: precipitation
 disforest: distance to forest
 gdp: GDP density
