@@ -1,8 +1,8 @@
 # XGBoost-SHAP-values： Prediction of grassland degradation
-## Table of contents
-### Background
+
+## Background
 This project aims to using argificial intelligence methods to simulating and predicting land use change.
-### Install
+## Install
 #Please use Ananconda as basis environment for Python3.X
 #Anaconda is a free and open-source distribution of the Python and R 
 #programming languages for scientific computing (data science, machine 
@@ -22,7 +22,7 @@ conda install -c conda-forge imbalanced-learn
 conda install -c conda-forge ipython
 conda install -c conda-forge matplotlib
 conda install -c conda-forge pandas
-### Data and output introduction
+## Data and output introduction
 The present example of machine learning modelling was created on the basis of spatial data from Inner Mongolia (China). Firstly, a model (lr) was developed on the basis of logistic regression.  This model achieves only a low accuracy and serves as a benchmark. The second model xgb was created using XGBoost. It achieved a very high accuracy both in training and, more importantly, in test data excluded from training. 
 
 The data has an unbalanced distribution for class 0 (no degradation) and class 1 (degradation) of about 10:1 To change this, artificial values were added using a "RandomOverSampler" from the Python package "imblearn".
@@ -86,7 +86,7 @@ area under PR     : 0.997592
 
 
 ##Happy hacking
-### Maintainer
+## Maintainer
 @Batunacun2020
-### Contributing
+## Contributing
 @Ralf Wieland @Batunacun
