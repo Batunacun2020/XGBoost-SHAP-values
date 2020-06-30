@@ -2,26 +2,9 @@
 
 ## Background
 This project aims to using argificial intelligence methods to simulating and predicting land use change.
+This project has been published on Geoscientific Model Development, please check the link to download it: https://gmd.copernicus.org/preprints/gmd-2020-59/#discussion
 ## Install
-#Please use Ananconda as basis environment for Python3.X
-#Anaconda is a free and open-source distribution of the Python and R 
-#programming languages for scientific computing (data science, machine 
-#learning applications)
-#for installation look at: https://www.anaconda.com/products/individual
-#and install the open source version for your operation system
-#========================================================================
-#Please install the following packages using a conda virtual enviroment 
-#========================================================================
-#conda create a new virtual environment
-conda create --name XGB
-conda activate XGB
-#install packages
-conda install -c conda-forege xgboost
-conda install -c conda-forge shap 
-conda install -c conda-forge imbalanced-learn
-conda install -c conda-forge ipython
-conda install -c conda-forge matplotlib
-conda install -c conda-forge pandas
+Please check the install text. 
 ## Data and output introduction
 The present example of machine learning modelling was created on the basis of spatial data from Inner Mongolia (China). Firstly, a model (lr) was developed on the basis of logistic regression.  This model achieves only a low accuracy and serves as a benchmark. The second model xgb was created using XGBoost. It achieved a very high accuracy both in training and, more importantly, in test data excluded from training. 
 
