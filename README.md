@@ -78,12 +78,16 @@ Testing precision|0.99
 Testing recall|0.96
 kappa|0.96
 area under PR|1.00
+## Model results
+### Drivers selection
+The SHAP values plot combines feature importance (drivers are ordered along the y-axis) and driver effects (SHAP values on the x-axis), which describe the probability of NGD having occurred. Positive SHAP values refer to a higher probability of NGD. The gradient colour represents the feature value from high (red) to low (blue). As the figure shows, disdense was the primary driver for NGD in the study region. The relationship between disdense and NGD is non-linear, which can be seen from the SHAP values being both positive and negative. 
+
+### Drivers interpretation
 ============================== SHAP ===============================  
 ![shap](https://github.com/Batunacun2020/XGBoost-SHAP-values/blob/master/shap2.png)
 
 
-##Happy hacking
 ## Maintainer
 @Batunacun2020
 ## Contributing
-@Ralf Wieland @Batunacun
+@Ralf Wieland @Batunacun2020
