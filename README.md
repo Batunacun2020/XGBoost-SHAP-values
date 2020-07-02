@@ -43,7 +43,6 @@ water|distance to  water
 pop|population density 
 rural|distance to rural area 
 aspect|aspect  
------------- | -------------
 ## Smpling stratigies and Model validation:
 ### Smpling stratigies
 ========================= Oversampling ============================  
@@ -51,7 +50,7 @@ Sampling stratiges | sampling size
 ------------ | -------------
 items before over sampling|[(0.0, 18190), (1.0, 1810)]  
 items after over sampling|[(0.0, 18190), (1.0, 18190)]  
------------- | -------------
+
 ### Model validation
 #### overall classification accuracy
 #### precision
@@ -68,7 +67,7 @@ Testing precision|0.6802241793434748
 Testing recall|0.7084723148765844     
 kappa | 0.3761745858219654
 area under PR|0.761540      
------------- | -------------      
+  
 ============================= XGBoost =============================  
 Testing score     : 0.9789272030651341  
 Training score    : 0.9809222942479692  
