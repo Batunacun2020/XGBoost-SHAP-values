@@ -60,24 +60,24 @@ items after over sampling|[(0.0, 18190), (1.0, 18190)]
 ====================== Logistic Regression ========================  
 validation indicators| results
 ------------ | -------------
-Testing score|0.6880726303514909
-Training score|0.6938951341593501
-Testing score1|0.6880726303514909
-Testing precision|0.6802241793434748  
-Testing recall|0.7084723148765844     
-kappa | 0.3761745858219654
-area under PR|0.761540      
+Testing score|0.689
+Training score|0.69
+Testing score1|0.69
+Testing precision|0.68 
+Testing recall|0.71   
+kappa | 0.38
+area under PR|0.76   
   
 ============================= XGBoost =============================  
-Testing score     : 0.9789272030651341  
-Training score    : 0.9809222942479692  
-Testing score1    : 0.9789272030651341  
-Testing precision : 0.9665312753858651  
-Testing recall    : 0.9921614409606404  
-kappa             : 0.9578556504852656  
-F1 score          : 0.979179  
-ROC AUC           : 0.997841  
-area under PR     : 0.997592  
+validation indicators| results
+------------ | -------------
+Testing score|0.98
+Training score |0.98
+Testing score1 |0.97
+Testing precision |0.99
+Testing recall|0.96
+kappa|0.96
+area under PR|1.00
 ============================== SHAP ===============================  
 ![shap](https://github.com/Batunacun2020/XGBoost-SHAP-values/blob/master/shap2.png)
 
