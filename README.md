@@ -3,8 +3,8 @@
 ## Background
 This project aims to simulating and predicting grassland degradation by using Machine Learning method-XGBoost.
 ### Objectives
-From 2000 to 2015, about 10.2% of the total area has experienced grassland degradation. We are primarily interested in learning whether ML models can achieve a better predictive quality than linear methods, in addition to improving our understanding of how grassland degrades in Xilingol. The objects in this project as following:
-(1) Can machine learning models achieve a better predictive quality than linear methods?
+From 2000 to 2015, about 10.2% of the total area has experienced grassland degradation. We are primarily interested in learning whether ML models can achieve a better predictive quality than linear methods, in addition to improving our understanding of how grassland degrades in Xilingol. The objects in this project as following:  
+(1) Can machine learning models achieve a better predictive quality than linear methods?  
 (2) How can we open the nonlinear relationships of the black box model? 
 
 ### Related publication
