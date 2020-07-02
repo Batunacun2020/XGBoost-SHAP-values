@@ -16,7 +16,7 @@ SHAP values as a statistical method use used in this project to sort the driverâ
 
 This example software is part of my research work in Germany at Zalf MÃ¼ncheberg and is aimed at stimulating the study of the methodology of machine learning.
 
-##Data description
+## Data description
 #### Data collection and processing
 In line with previous studies, A total of 20 (include one policy proxy variable) drivers were used in this project to simulating grassland degradation in Xilingol.
 
@@ -45,7 +45,7 @@ rural|distance to rural area
 aspect|aspect  
 ------------ | -------------
 
-##Model output:
+## Model output:
 
 ========================= Oversampling ============================  
 items before over sampling: [(0.0, 18190), (1.0, 1810)]  
@@ -70,7 +70,6 @@ kappa             : 0.9578556504852656
 F1 score          : 0.979179  
 ROC AUC           : 0.997841  
 area under PR     : 0.997592  
-
 ============================== SHAP ===============================  
 
 ![shap](shape2.png)
