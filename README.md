@@ -1,7 +1,7 @@
 # XGBoost-SHAP-values： Prediction of grassland degradation
 
 ## Background
-This project aims to using argificial intelligence methods to simulating and predicting land use change.
+This project aims to simulating and predicting grassland degradation by using Machine Learning method-XGBoost.
 This project has been published on Geoscientific Model Development, please check the link to download it: https://gmd.copernicus.org/preprints/gmd-2020-59/#discussion
 ## Install
 Please check the install text. 
@@ -15,7 +15,11 @@ Furthermore, the SHAP library was used for the statistical analysis of xgb in th
 This example software is part of my research work in Germany at Zalf Müncheberg and is aimed at stimulating the study of the methodology of machine learning.
 
 ##Data description
-disdens: distance to dense grass  
+
+Driver name | Description
+------------ | -------------
+disdens | distance to dense grass  
+------------ | -------------
 dismode: distance to moderately dense grass  
 dissparse: distance to sparse grass  
 sheep: sheep density    
