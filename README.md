@@ -10,7 +10,7 @@ From 2000 to 2015, about 10.2% of the total area has experienced grassland degra
 ### Related publication
 This project has been published on Geoscientific Model Development, please check the link to download it: https://gmd.copernicus.org/preprints/gmd-2020-59/#discussion
 ## Install
-Please check the install text. 
+Please check the instal.txt. 
 ## Data and output introduction
 ### Model selection
 The present example of machine learning modelling was created on the basis of spatial data from Inner Mongolia (China). Firstly, a model (Logistic regression) was developed on the basis of logistic regression.  This model achieves only a low accuracy and serves as a benchmark. The second non-linear (black box model) model was created using XGBoost. It achieved a very high accuracy both in training and simulating process, more importantly, in test data excluded from training. 
