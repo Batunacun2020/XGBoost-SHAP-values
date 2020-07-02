@@ -71,8 +71,7 @@ F1 score          : 0.979179
 ROC AUC           : 0.997841  
 area under PR     : 0.997592  
 ============================== SHAP ===============================  
-
-![shap](shape2.png)
+![shap](https://github.com/Batunacun2020/XGBoost-SHAP-values/blob/master/shap2.png)
 
 
 ##Happy hacking
