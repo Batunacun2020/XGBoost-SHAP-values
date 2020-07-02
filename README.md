@@ -58,7 +58,7 @@ items after over sampling|[(0.0, 18190), (1.0, 18190)]
 #### kappa
 #### area under PR
 ====================== Logistic Regression ========================  
-validation indicators| results
+validation indicators|results
 ------------ | -------------
 Testing score|0.689
 Training score|0.69
@@ -69,12 +69,12 @@ kappa | 0.38
 area under PR|0.76   
   
 ============================= XGBoost =============================  
-validation indicators| results
+validation indicators|results
 ------------ | -------------
 Testing score|0.98
-Training score |0.98
-Testing score1 |0.97
-Testing precision |0.99
+Training score|0.98
+Testing score1|0.97
+Testing precision|0.99
 Testing recall|0.96
 kappa|0.96
 area under PR|1.00
