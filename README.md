@@ -6,11 +6,12 @@ This project has been published on Geoscientific Model Development, please check
 ## Install
 Please check the install text. 
 ## Data and output introduction
-The present example of machine learning modelling was created on the basis of spatial data from Inner Mongolia (China). Firstly, a model (lr) was developed on the basis of logistic regression.  This model achieves only a low accuracy and serves as a benchmark. The second model xgb was created using XGBoost. It achieved a very high accuracy both in training and, more importantly, in test data excluded from training. 
-
+### Model selection
+The present example of machine learning modelling was created on the basis of spatial data from Inner Mongolia (China). Firstly, a model (Logistic regression) was developed on the basis of logistic regression.  This model achieves only a low accuracy and serves as a benchmark. The second non-linear (black box model) model was created using XGBoost. It achieved a very high accuracy both in training and simulating process, more importantly, in test data excluded from training. 
+### Imbalance issue
 The data has an unbalanced distribution for class 0 (no degradation) and class 1 (degradation) of about 10:1 To change this, artificial values were added using a "RandomOverSampler" from the Python package "imblearn".
 Over-sampling method refers Artificial points are added to the minority class of an imbalanced sampling set, making it equal to the majority class and resulting in equal sized samples.
-
+### Open black box model-SHAP values
 Furthermore, the SHAP library was used for the statistical analysis of xgb in the methodology presented here. The SHAP allows a detailed analysis of single decisions, the dependencies of two inputs up to the overall analysis of the feature_importance (shap.summary_plot). This was used to determine the four most important influencing variables of the model.
 SHAP values as a statistical method use used in this project to sort the driver’s effects, and break down the prediction into individual feature impacts.
 
@@ -19,7 +20,6 @@ This example software is part of my research work in Germany at Zalf Müncheberg
 ## Data description
 #### Data collection and processing
 In line with previous studies, A total of 20 (include one policy proxy variable) drivers were used in this project to simulating grassland degradation in Xilingol.
-
 #### Drvier description
 Driver name | Description
 ------------ | -------------
@@ -44,22 +44,31 @@ pop|population density
 rural|distance to rural area 
 aspect|aspect  
 ------------ | -------------
-
-## Model output:
-
+## Smpling stratigies and Model validation:
+### Smpling stratigies
 ========================= Oversampling ============================  
-items before over sampling: [(0.0, 18190), (1.0, 1810)]  
-items after over sampling: [(0.0, 18190), (1.0, 18190)]  
+Sampling stratiges | sampling size
+------------ | -------------
+items before over sampling|[(0.0, 18190), (1.0, 1810)]  
+items after over sampling|[(0.0, 18190), (1.0, 18190)]  
+------------ | -------------
+### Model validation
+#### overall classification accuracy
+#### precision
+#### recall
+#### kappa
+#### area under PR
 ====================== Logistic Regression ========================  
-Testing score     : 0.6880726303514909  
-Training score    : 0.6938951341593501  
-Testing score1    : 0.6880726303514909  
-Testing precision : 0.6802241793434748  
-Testing recall    : 0.7084723148765844  
-kappa             : 0.3761745858219654  
-F1 score          : 0.694061  
-ROC AUC           : 0.749781  
-area under PR     : 0.761540  
+validation indicators| results
+------------ | -------------
+Testing score|0.6880726303514909
+Training score|0.6938951341593501
+Testing score1|0.6880726303514909
+Testing precision|0.6802241793434748  
+Testing recall|0.7084723148765844     
+kappa | 0.3761745858219654
+area under PR|0.761540      
+------------ | -------------      
 ============================= XGBoost =============================  
 Testing score     : 0.9789272030651341  
 Training score    : 0.9809222942479692  
