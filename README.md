@@ -19,27 +19,26 @@ This example software is part of my research work in Germany at Zalf Müncheberg
 Driver name | Description
 ------------ | -------------
 disdens | distance to dense grass  
+dismode |distance to moderately dense grass  
+dissparse| distance to sparse grass  
+sheep|sheep density  
+disunused|distance to unused land 
+prec|precipitation  
+disforest|distance to forest
+gdp|GDP density  
+urban|distance to urban  
+dem|DEM  
+slope| slope  
+mine|distance to mining area
+temp|temperature  
+discrop|distance to cropland  
+desertPolicy|policy setting, dummy variable  
+road|distance to road 
+water|distance to  water
+pop|population density 
+rural|distance to rural area 
+aspect|aspect  
 ------------ | -------------
-dismode: distance to moderately dense grass  
-dissparse: distance to sparse grass  
-sheep: sheep density    
-disunused: distance to unused land    
-prec: precipitation  
-disforest: distance to forest  
-gdp: GDP density  
-urban: distance to urban  
-dem: DEM  
-slope: slope  
-mine: distance to mine  
-temp: temperature  
-discrop: distance to cropland  
-desertPolicy: policy setting, dummy variable  
-road: distance to road  
-water: distance to  water  
-pop: population density  
-rural: distance to rural area  
-aspect: aspect  
-
 
 ##Model output:
 
