@@ -2,6 +2,12 @@
 
 ## Background
 This project aims to simulating and predicting grassland degradation by using Machine Learning method-XGBoost.
+### Objectives
+From 2000 to 2015, about 10.2% of the total area has experienced grassland degradation. We are primarily interested in learning whether ML models can achieve a better predictive quality than linear methods, in addition to improving our understanding of how grassland degrades in Xilingol. The objects in this project as following:
+(1) Can machine learning models achieve a better predictive quality than linear methods?
+(2) How can we open the nonlinear relationships of the black box model? 
+
+### Related publication
 This project has been published on Geoscientific Model Development, please check the link to download it: https://gmd.copernicus.org/preprints/gmd-2020-59/#discussion
 ## Install
 Please check the install text. 
@@ -21,6 +27,8 @@ This example software is part of my research work in Germany at Zalf Müncheberg
 #### Data collection and processing
 In line with previous studies, A total of 20 (include one policy proxy variable) drivers were used in this project to simulating grassland degradation in Xilingol.
 #### Drvier description
+For example: disdens is the abbreviation of distance to dense grassland, it was the euclidean distance that calculated by ArcGIS.
+Disdens is a proxy drivers, that could stand for the existing dense grassland effects and the comprehensitive environment of the dense grassland.
 Driver name | Description
 ------------ | -------------
 disdens | distance to dense grass  
@@ -52,11 +60,12 @@ items before over sampling|[(0.0, 18190), (1.0, 1810)]
 items after over sampling|[(0.0, 18190), (1.0, 18190)]  
 
 ### Model validation
-#### overall classification accuracy
-#### precision
-#### recall
-#### kappa
-#### area under PR
+#### overall classification accuracy is the correct prediction of NGD and other pixels in the whole region. This indicator was used to evaluate the accuracy of the model.
+#### precision is the proportion of correctly predicted positive examples (refers to NGD in this study) in all predicted positive examples.
+#### recall is the proportion of correctly predicted positive examples in all observed positive examples (the observed NGD)
+#### kappa:
+#### The precision-recall curve (PR curve) provides more information about the model’s performance than, for instance, the Receiver Operator Characteristic curve (ROC curve), when applied to skewed data. The PR curve shows the trade-off of precision and recall, and provides a model-wide evaluation.
+#### area under PR: The area under the PR curve (AUC-PR) is likewise effective in the classification of model comparisons. 
 ====================== Logistic Regression ========================  
 validation indicators|results
 ------------ | -------------
