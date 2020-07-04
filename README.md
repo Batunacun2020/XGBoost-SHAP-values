@@ -59,8 +59,8 @@ Kappa is a popular indicator used to measure the proportion of agreement between
 PR curve provides more information about the model’s performance than, for instance, the Receiver Operator Characteristic curve (ROC curve), when applied to skewed data. The PR curve shows the trade-off of precision and recall, and provides a model-wide evaluation.
 ### area under PR: The area under the PR curve (AUC-PR) 
 AUC-PR is likewise effective in the classification of model comparisons. 
-======================  ========================  
-validation indicators|Logistic Regression|XGBoost validation
+====================== LG and XGBoost valdation ========================  
+validation indicators|Logistic Regression validation|XGBoost validation
 ------------ | -------------| -------------
 Testing score|0.689|0.98
 Training score|0.69|0.98
@@ -69,18 +69,7 @@ Testing precision|0.68|0.99
 Testing recall|0.71|0.96
 kappa | 0.38|0.96
 area under PR|0.76| 1.00
-  
-============================= XGBoost =============================  
-validation indicators|results
------------- | -------------
-Testing score|
-Training score|
-Testing score1|
-Testing precision|
-Testing recall|
-kappa|
-area under PR|
-
+ 
 ## Open black box model-SHAP values
 Furthermore, the SHAP library was used for the statistical analysis of xgb in the methodology presented here. The SHAP allows a detailed analysis of single decisions, the dependencies of two inputs up to the overall analysis of the feature_importance (shap.summary_plot). This was used to determine the four most important influencing variables of the model.
 SHAP values as a statistical method use used in this project to sort the driver’s effects, and break down the prediction into individual feature impacts.
