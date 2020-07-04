@@ -86,7 +86,7 @@ SHAP values as a statistical method use used in this project to sort the driverâ
 
 This example software is part of my research work in Germany at Zalf MÃ¼ncheberg and is aimed at stimulating the study of the methodology of machine learning.
 <p align="center">
-  <img src="https://github.com/Batunacun2020/XGBoost-SHAP-values/blob/master/Decomposed%20SHAP%20values.png" title="SHAP values">
+  <img src="https://github.com/Batunacun2020/XGBoost-SHAP-values/blob/master/Decomposed%20SHAP%20values.png"  height=70% width=70% title="SHAP values">
 </p>
 
 ## Model results
@@ -97,7 +97,7 @@ The SHAP values plot combines feature importance (drivers are ordered along the 
 ### Drivers interpretation
 ============================== SHAP ===============================  
 <p align="center">
-  <img src="https://github.com/Batunacun2020/XGBoost-SHAP-values/blob/master/SHAPvaluesGitHub.png" height=70% width=70% title="SHAP values">
+  <img src="https://github.com/Batunacun2020/XGBoost-SHAP-values/blob/master/SHAPvaluesGitHub.png" height=60% width=60% title="SHAP values">
 </p>
 
 
