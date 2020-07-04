@@ -90,7 +90,7 @@ The SHAP values plot combines feature importance (drivers are ordered along the 
 
 ### Drivers interpretation
 ============================== SHAP ===============================  
-![SHAPvaluesForGitHub-small](https://github.com/Batunacun2020/XGBoost-SHAP-values/blob/master/SHAPvaluesGitHub.png =150 × 200)
+![SHAPvaluesForGitHub-small](https://github.com/Batunacun2020/XGBoost-SHAP-values/blob/master/SHAPvaluesGitHub.png){:height="24px" width="48px"}
 
 
 ## Maintainer
