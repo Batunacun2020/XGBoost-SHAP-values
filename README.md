@@ -38,7 +38,7 @@ Over-sampling method refers Artificial points are added to the minority class of
 ### Smplling stratigies
 Data are often distributed unevenly among different classes. Such imbalanced class distribution generally induces a bias. Canonical ML algorithms assume that data is roughly balanced in different classes. In real situations, however, the data is usually skewed, and smaller classes often carry more important information and knowledge than larger ones. It is therefore important to develop learning from imbalanced data to build real-world models. To ensure a highly accurate GD model, we introduced four different sampling methods in this study(following figure).
 <p align="center">
-  <img src="https://github.com/Batunacun2020/XGBoost-SHAP-values/blob/master/Four%20sampling%20strategies%20used%20in%20this%20project.png" height=60% width=60%>
+  <img src="https://github.com/Batunacun2020/XGBoost-SHAP-values/blob/master/Four%20sampling%20strategies%20used%20in%20this%20project.png" height=70% width=70%>
 </p>
 
 ========================= Oversampling ============================  
@@ -62,7 +62,7 @@ AUC-PR is likewise effective in the classification of model comparisons.
 ====================== LG and XGBoost valdation ========================  
 validation indicators|Logistic Regression validation|XGBoost validation
 ------------ | -------------| -------------
-Testing score|0.689|0.98
+Testing score|0.69|0.98
 Training score|0.69|0.98
 Testing score1|0.69|0.97
 Testing precision|0.68|0.99
@@ -76,7 +76,7 @@ SHAP values as a statistical method use used in this project to sort the driverâ
 
 This example software is part of my research work in Germany at Zalf MÃ¼ncheberg and is aimed at stimulating the study of the methodology of machine learning.
 <p align="center">
-  <img src="https://github.com/Batunacun2020/XGBoost-SHAP-values/blob/master/Decomposed%20SHAP%20values.png"  height=70% width=70% title="SHAP values">
+  <img src="https://github.com/Batunacun2020/XGBoost-SHAP-values/blob/master/Decomposed%20SHAP%20values.png"  height=80% width=80% title="SHAP values">
 </p>
 
 ## Model results
