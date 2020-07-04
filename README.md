@@ -16,18 +16,18 @@ In line with previous studies, A total of 20 (include one policy proxy variable)
 ### Drvier description
 For example: disdens is the abbreviation of distance to dense grassland, it was the euclidean distance that calculated by ArcGIS.
 Disdens is a proxy drivers, that could stand for the existing dense grassland effects and the comprehensitive environment of the dense grassland.
-Driver name | Description                        Driver name | Description          
------------- | --------------                    ----------- | -------------
-disdens | distance to dense grass                slope| slope  
-dismode |distance to moderately dense grass      mine|distance to mining area
-dissparse| distance to sparse grass              temp|temperature
-sheep|sheep density                              discrop|distance to cropland 
-disunused|distance to unused land                desertPolicy|policy setting, dummy variable 
-prec|precipitation                               road|distance to road 
-disforest|distance to forest                     water|distance to  water
-gdp|GDP density                                  pop|population density 
-urban|distance to urban                          rural|distance to rural area 
-dem|DEM                                          aspect|aspect  
+Driver name | Description|Driver name | Description          
+------------ | --------------|----------- | -------------
+disdens | distance to dense grass|                slope| slope  
+dismode |distance to moderately dense grass|      mine|distance to mining area
+dissparse| distance to sparse grass|              temp|temperature
+sheep|sheep density |                          discrop|distance to cropland 
+disunused|distance to unused land|                desertPolicy|policy setting, dummy variable 
+prec|precipitation|                               road|distance to road 
+disforest|distance to forest|                     water|distance to  water
+gdp|GDP density|                                 pop|population density 
+urban|distance to urban|                          rural|distance to rural area 
+dem|DEM|                                         aspect|aspect  
 
 ## Model selection 
 The present example of machine learning modelling was created on the basis of spatial data from Inner Mongolia (China). Firstly, a model (Logistic regression) was developed on the basis of logistic regression.  This model achieves only a low accuracy and serves as a benchmark. The second non-linear (black box model) model was created using XGBoost. It achieved a very high accuracy both in training and simulating process, more importantly, in test data excluded from training. 
