@@ -13,6 +13,7 @@ This project has been published on Geoscientific Model Development, please check
 Please check the install.txt. 
 ## Data collection
 In line with previous studies, A total of 20 (include one policy proxy variable) drivers were used in this project to simulating grassland degradation in Xilingol.
+The data used in this project please check "dataImbalance.csv"
 ### Drvier description
 For example: disdens is the abbreviation of distance to dense grassland, it was the euclidean distance that calculated by ArcGIS.
 Disdens is a proxy drivers, that could stand for the existing dense grassland effects and the comprehensitive environment of the dense grassland.
