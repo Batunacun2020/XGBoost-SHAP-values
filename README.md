@@ -2,11 +2,11 @@
 
 ## Background
 This project aims to simulating and predicting grassland degradation by using Machine Learning method-XGBoost.
+SHAP values was used to "crack the black model", XGBoost. SHAP values were useful for analysing the complex relationship between the different drivers of grassland degradation. 
 ### Objectives
 From 2000 to 2015, about 10.2% of the total area has experienced grassland degradation. We are primarily interested in learning whether ML models can achieve a better predictive quality than linear methods, in addition to improving our understanding of how grassland degrades in Xilingol. The objects in this project as following:  
 (1) Can machine learning models achieve a better predictive quality than linear methods?  
 (2) How can we open the nonlinear relationships of the black box model? 
-
 ### Related publication
 This project has been published on Geoscientific Model Development, please check the link to download it: https://gmd.copernicus.org/preprints/gmd-2020-59/#discussion
 ## Install
@@ -23,7 +23,7 @@ SHAP values as a statistical method use used in this project to sort the driver�
 
 This example software is part of my research work in Germany at Zalf Müncheberg and is aimed at stimulating the study of the methodology of machine learning.
 
-## Data description
+## Data collection
 #### Data collection and processing
 In line with previous studies, A total of 20 (include one policy proxy variable) drivers were used in this project to simulating grassland degradation in Xilingol.
 #### Drvier description
@@ -53,6 +53,8 @@ rural|distance to rural area
 aspect|aspect  
 ## Smpling stratigies and Model validation:
 ### Smpling stratigies
+Data are often distributed unevenly among different classes. Such imbalanced class distribution generally induces a bias. Canonical ML algorithms assume that data is roughly balanced in different classes. In real situations, however, the data is usually skewed, and smaller classes often carry more important information and knowledge than larger ones. It is therefore important to develop learning from imbalanced data to build real-world models. To ensure a highly accurate GD model, we introduced four different sampling methods in this study(following figure).
+![SHAPvaluesForGitHub-small](https://github.com/Batunacun2020/XGBoost-SHAP-values/blob/master/SHAPvalues.png)
 ========================= Oversampling ============================  
 Sampling stratiges | sampling size
 ------------ | -------------
@@ -60,12 +62,19 @@ items before over sampling|[(0.0, 18190), (1.0, 1810)]
 items after over sampling|[(0.0, 18190), (1.0, 18190)]  
 
 ### Model validation
-#### overall classification accuracy is the correct prediction of NGD and other pixels in the whole region. This indicator was used to evaluate the accuracy of the model.
-#### precision is the proportion of correctly predicted positive examples (refers to NGD in this study) in all predicted positive examples.
-#### recall is the proportion of correctly predicted positive examples in all observed positive examples (the observed NGD)
-#### kappa:
-#### The precision-recall curve (PR curve) provides more information about the model’s performance than, for instance, the Receiver Operator Characteristic curve (ROC curve), when applied to skewed data. The PR curve shows the trade-off of precision and recall, and provides a model-wide evaluation.
-#### area under PR: The area under the PR curve (AUC-PR) is likewise effective in the classification of model comparisons. 
+
+#### Overall classification accuracy (OCA)
+OCA is the correct prediction of NGD and other pixels in the whole region. This indicator was used to evaluate the accuracy of the model.
+#### precision 
+Precision is the proportion of correctly predicted positive examples (refers to NGD in this study) in all predicted positive examples.
+#### Recall 
+Recall is the proportion of correctly predicted positive examples in all observed positive examples (the observed NGD)
+#### Kappa
+Kappa is a popular indicator used to measure the proportion of agreement between observed and simulated data, especially to measure the degree of spatial matching. 
+#### The precision-recall curve (PR curve)
+PR curve provides more information about the model’s performance than, for instance, the Receiver Operator Characteristic curve (ROC curve), when applied to skewed data. The PR curve shows the trade-off of precision and recall, and provides a model-wide evaluation.
+#### area under PR: The area under the PR curve (AUC-PR) 
+AUC-PR is likewise effective in the classification of model comparisons. 
 ====================== Logistic Regression ========================  
 validation indicators|results
 ------------ | -------------
