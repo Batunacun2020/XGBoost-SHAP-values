@@ -37,6 +37,7 @@ Over-sampling method refers Artificial points are added to the minority class of
 ### Smplling stratigies
 Data are often distributed unevenly among different classes. Such imbalanced class distribution generally induces a bias. Canonical ML algorithms assume that data is roughly balanced in different classes. In real situations, however, the data is usually skewed, and smaller classes often carry more important information and knowledge than larger ones. It is therefore important to develop learning from imbalanced data to build real-world models. To ensure a highly accurate GD model, we introduced four different sampling methods in this study(following figure).
 ![SHAPvaluesForGitHub-small](https://github.com/Batunacun2020/XGBoost-SHAP-values/blob/master/Four%20sampling%20strategies%20used%20in%20this%20project.png){:height="50%" width="50%"}
+
 ========================= Oversampling ============================  
 Sampling stratiges | sampling size
 ------------ | -------------
@@ -82,7 +83,8 @@ Furthermore, the SHAP library was used for the statistical analysis of xgb in th
 SHAP values as a statistical method use used in this project to sort the driver’s effects, and break down the prediction into individual feature impacts.
 
 This example software is part of my research work in Germany at Zalf Müncheberg and is aimed at stimulating the study of the methodology of machine learning.
-![SHAPvaluesForGitHub-small](https://github.com/Batunacun2020/XGBoost-SHAP-values/blob/master/Decomposed%20SHAP%20values.png){:height="50%" width="50%"}
+![](https://github.com/Batunacun2020/XGBoost-SHAP-values/blob/master/Decomposed%20SHAP%20values.png){:height="50%" width="50%"}
+
 ## Model results
 
 ### Drivers selection
@@ -90,6 +92,7 @@ The SHAP values plot combines feature importance (drivers are ordered along the 
 
 ### Drivers interpretation
 ============================== SHAP ===============================  
+
 ![SHAPvaluesForGitHub-small](https://github.com/Batunacun2020/XGBoost-SHAP-values/blob/master/SHAPvaluesGitHub.png){:height="24px" width="48px"}(div align=”center”)
 
 ## Maintainer
