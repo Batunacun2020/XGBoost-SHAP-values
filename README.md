@@ -22,6 +22,7 @@ Furthermore, the SHAP library was used for the statistical analysis of xgb in th
 SHAP values as a statistical method use used in this project to sort the driver’s effects, and break down the prediction into individual feature impacts.
 
 This example software is part of my research work in Germany at Zalf Müncheberg and is aimed at stimulating the study of the methodology of machine learning.
+![SHAPvaluesForGitHub-small](https://github.com/Batunacun2020/XGBoost-SHAP-values/blob/master/SHAPvalues.png)
 
 ## Data collection
 #### Data collection and processing
