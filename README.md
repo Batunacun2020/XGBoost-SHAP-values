@@ -8,14 +8,14 @@ From 2000 to 2015, about 10.2% of the total area has experienced grassland degra
 (1) Can machine learning models achieve a better predictive quality than linear methods?  
 (2) How can we open the nonlinear relationships of the black box model? 
 ### Related publication
-This project has been published on Geoscientific Model Development, please check the link to download it: https://gmd.copernicus.org/preprints/gmd-2020-59/#discussion
+This project has been published on "Geoscientific Model Development", please check the link to download it: https://gmd.copernicus.org/preprints/gmd-2020-59/#discussion
 ## Install
 Please check the install.txt. 
 ## Data collection
 In line with previous studies, A total of 20 (include one policy proxy variable) drivers were used in this project to simulating grassland degradation in Xilingol.
 The data used in this project please check "dataImbalance.csv"
 ### Drvier description
-For example: disdens is the abbreviation of distance to dense grassland, it was the euclidean distance that calculated by ArcGIS.
+For example: disdens is the abbreviation of distance to dense grassland, it is euclidean distance that calculated by ArcGIS.
 Disdens is a proxy drivers, that could stand for the existing dense grassland effects and the comprehensitive environment of the dense grassland.
 Driver name | Description|Driver name | Description          
 ------------ | --------------|----------- | -------------
@@ -30,8 +30,11 @@ gdp|GDP density|                                 pop|population density
 urban|distance to urban|                          rural|distance to rural area 
 dem|DEM|                                         aspect|aspect  
 
-## Model selection 
-The present example of machine learning modelling was created on the basis of spatial data from Inner Mongolia (China). Firstly, a model (Logistic regression) was developed on the basis of logistic regression.  This model achieves only a low accuracy and serves as a benchmark. The second non-linear (black box model) model was created using XGBoost. It achieved a very high accuracy both in training and simulating process, more importantly, in test data excluded from training. 
+## Model building and selection
+The present example of machine learning modelling was created on the basis of spatial data from Inner Mongolia (China). we use logistic regression as a benchmark model to compare linear and non-linear methods in the simulation of grassland degradation. This model achieves only a low accuracy. The second non-linear (black box model) model was created using XGBoost. It achieved a very high accuracy with four different samplling strategies(see follow section), in both training and simulating process. In this project, due to the limitation of the dataset, we post the model training process. The high accuracy model produced by training process could be used in simulation process.
+<p align="center">
+  <img src="  " height=70% width=70%>
+</p>
 ## Imbalance issue
 The data has an unbalanced distribution for class 0 (no degradation) and class 1 (degradation) of about 10:1 To change this, artificial values were added using a "RandomOverSampler" from the Python package "imblearn".
 Over-sampling method refers Artificial points are added to the minority class of an imbalanced sampling set, making it equal to the majority class and resulting in equal sized samples.
