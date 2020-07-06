@@ -31,15 +31,18 @@ urban|distance to urban|                          rural|distance to rural area
 dem|DEM|                                         aspect|aspect  
 
 ## Model building and selection
-The present example of machine learning modelling was created on the basis of spatial data from Inner Mongolia (China). we use logistic regression as a benchmark model to compare linear and non-linear methods in the simulation of grassland degradation. This model achieves only a low accuracy. The second non-linear (black box model) model was created using XGBoost. It achieved a very high accuracy with four different samplling strategies(see follow section), in both training and simulating process. In this project, due to the limitation of the dataset, we post the model training process. The high accuracy model produced by training process could be used in simulation process.
+The present example of machine learning modelling was created on the basis of spatial data from Inner Mongolia (China). we use logistic regression as a benchmark model to compare linear and non-linear methods in the simulation of grassland degradation. This model achieves only a low accuracy. The second non-linear (black box model) model was created using XGBoost. It achieved a very high accuracy with four different samplling strategies(see follow section), in both training and simulating process. In this project, due to the limitation of the dataset, we post the model training process. The high accuracy model produced by training process could be used in simulation process. The model building process see following figure.
 <p align="center">
   <img src="https://github.com/Batunacun2020/XGBoost-SHAP-values/blob/master/Model%20structure.png" height=50% width=50%>
 </p>
+
 ## Imbalance issue
-The data has an unbalanced distribution for class 0 (no degradation) and class 1 (degradation) of about 10:1 To change this, artificial values were added using a "RandomOverSampler" from the Python package "imblearn".
-Over-sampling method refers Artificial points are added to the minority class of an imbalanced sampling set, making it equal to the majority class and resulting in equal sized samples.
+The data has an unbalanced distribution for class 0 (non degradation, 90% of the total area) and class 1 (degradation, 10% of total area) of about 9:1. In machine learning group, the unevenly distributed  data generally led to overfitting or lost of important information. In a bid to avoid bias, differenet samplling strategies should be imported.  
+The sampling method generally includes balanced and imbalanced sample strategies. In this study, we tested various balanced sampling strategies to identify the most suitable one. Canonical ML algorithms assume that data is roughly balanced in different classes.
+
 ### Smplling stratigies
-Data are often distributed unevenly among different classes. Such imbalanced class distribution generally induces a bias. Canonical ML algorithms assume that data is roughly balanced in different classes. In real situations, however, the data is usually skewed, and smaller classes often carry more important information and knowledge than larger ones. It is therefore important to develop learning from imbalanced data to build real-world models. To ensure a highly accurate GD model, we introduced four different sampling methods in this study(following figure).
+ In real situations, however, the data is usually skewed, and smaller classes often carry more important information and knowledge than larger ones. It is therefore important to develop learning from imbalanced data to build real-world models. To ensure a highly accurate GD model, we introduced four different sampling methods in this study(following figure).
+ 
 <p align="center">
   <img src="https://github.com/Batunacun2020/XGBoost-SHAP-values/blob/master/Four%20sampling%20strategies%20used%20in%20this%20project.png" height=70% width=70%>
 </p>
