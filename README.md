@@ -41,10 +41,10 @@ About 10.2% of the total area has experienced grassland degradation. We simulate
 The data has an unbalanced distribution for class 0 (non degradation, 90% of the total area) and class 1 (degradation, 10% of total area) of about 9:1. In machine learning group, the unevenly distributed  data generally led to overfitting or lost of important information. In a bid to avoid bias, differenet samplling strategies should be imported.  The sampling method generally includes balanced and imbalanced sample strategies. In this study, we tested various balanced sampling strategies to identify the most suitable one. Canonical ML algorithms assume that data is roughly balanced in different classes.In real situations, however, the data is usually skewed, and smaller classes often carry more important information and knowledge than larger ones. It is therefore important to develop learning from imbalanced data to build real-world models. 
 
 ### Smplling stratigies
-We introduced four different sampling methods in this study.
-**Over-sampling**：Artificial points are added to the minority class of an imbalanced sampling set, making it equal to the majority class and resulting in equal sized samples.
-**Under-sampling**: Points are removed from a majority class of an imbalanced sampling set, making it equal to the minority class and resulting in equal sized samples.
-**Imbalanced-sampling**: Random data sampling, but with the same share of the sampled class, resulting in unequal sized samples.
+We introduced four different sampling methods in this study.  
+**Over-sampling**：Artificial points are added to the minority class of an imbalanced sampling set, making it equal to the majority class and resulting in equal sized samples.  
+**Under-sampling**: Points are removed from a majority class of an imbalanced sampling set, making it equal to the minority class and resulting in equal sized samples.  
+**Imbalanced-sampling**: Random data sampling, but with the same share of the sampled class, resulting in unequal sized samples.  
 **Balanced sampling**: Random data sampling, resulting in equal sized samples.
  
 <p align="center">
@@ -59,16 +59,11 @@ items after over sampling|[(0.0, 18190), (1.0, 18190)]
 ## Model validation
 ### Overall classification accuracy (OCA)
 OCA is the correct prediction of NGD and other pixels in the whole region. This indicator was used to evaluate the accuracy of the model.
-### precision 
-Precision is the proportion of correctly predicted positive examples (refers to NGD in this study) in all predicted positive examples.
-### Recall 
-Recall is the proportion of correctly predicted positive examples in all observed positive examples (the observed NGD)
-### Kappa
-Kappa is a popular indicator used to measure the proportion of agreement between observed and simulated data, especially to measure the degree of spatial matching. 
-### The precision-recall curve (PR curve)
-PR curve provides more information about the model’s performance than, for instance, the Receiver Operator Characteristic curve (ROC curve), when applied to skewed data. The PR curve shows the trade-off of precision and recall, and provides a model-wide evaluation.
-### area under PR: The area under the PR curve (AUC-PR) 
-AUC-PR is likewise effective in the classification of model comparisons. 
+**precision**:Precision is the proportion of correctly predicted positive examples (refers to NGD in this study) in all predicted positive examples.  
+**Recall**:Recall is the proportion of correctly predicted positive examples in all observed positive examples (the observed NGD)  
+**Kappa**:Kappa is a popular indicator used to measure the proportion of agreement between observed and simulated data, especially to measure the degree of spatial matching.   
+**The precision-recall curve (PR curve)**:PR curve provides more information about the model’s performance than, for instance, the Receiver Operator Characteristic curve (ROC curve), when applied to skewed data. The PR curve shows the trade-off of precision and recall, and provides a model-wide evaluation.  
+**area under PR, The area under the PR curve (AUC-PR)**:AUC-PR is likewise effective in the classification of model comparisons. 
 ====================== LG and XGBoost valdation ========================  
 validation indicators|Logistic Regression validation|XGBoost validation
 ------------ | -------------| -------------
@@ -106,6 +101,6 @@ The SHAP values plot combines feature importance (drivers are ordered along the 
 ## Contributing
 @Ralf Wieland @Batunacun2020
 ## Reference
-Batunacun, Wieland R, Lakes T, Nendel C. 2020. Using SHAP to interpret XGBoost predictions of grassland degradation in Xilingol, China. Geoscientific Model Development Discussions 1–28. DOI: https://doi.org/10.5194/gmd-2020-59
-He H, Garcia EA. 2009. Learning from Imbalanced Data. IEEE Transactions on Knowledge and Data Engineering 21: 1263–1284. DOI: 10.1109/TKDE.2008.239
+1,Batunacun, Wieland R, Lakes T, Nendel C. 2020. Using SHAP to interpret XGBoost predictions of grassland degradation in Xilingol, China. Geoscientific Model Development Discussions 1–28. DOI: https://doi.org/10.5194/gmd-2020-59
+2,He H, Garcia EA. 2009. Learning from Imbalanced Data. IEEE Transactions on Knowledge and Data Engineering 21: 1263–1284. DOI: 10.1109/TKDE.2008.239
 
