@@ -72,6 +72,8 @@ Training score|0.69|0.98
 Testing score1|0.69|0.97
 Testing precision|0.68|0.99
 Testing recall|0.71|0.96
+F1 score|0.69| 0.98
+ROC AUC|0.75| 1.00
 kappa | 0.38|0.96
 area under PR|0.76| 1.00
  
@@ -99,7 +101,7 @@ The SHAP values plot combines feature importance (drivers are ordered along the 
 ## Maintainer
 @Batunacun2020
 ## Contributing
-@Ralf Wieland @Batunacun2020
+@Ralf Wieland (https://github.com/Ralf3) @Batunacun2020
 ## Reference
 1,Batunacun, Wieland R, Lakes T, Nendel C. 2020. Using SHAP to interpret XGBoost predictions of grassland degradation in Xilingol, China. Geoscientific Model Development Discussions 1–28. DOI: https://doi.org/10.5194/gmd-2020-59  
 2,He H, Garcia EA. 2009. Learning from Imbalanced Data. IEEE Transactions on Knowledge and Data Engineering 21: 1263–1284. DOI: 10.1109/TKDE.2008.239
