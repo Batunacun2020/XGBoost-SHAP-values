@@ -48,7 +48,7 @@ We introduced four different sampling methods in this study.
 **Balanced sampling**: Random data sampling, resulting in equal sized samples.
  
 <p align="center">
-  <img src="https://github.com/Batunacun2020/XGBoost-SHAP-values/blob/master/Four%20sampling%20strategies%20used%20in%20this%20project.png" height=60% width=60% alt="Smpling strategites">
+  <img src="https://github.com/Batunacun2020/XGBoost-SHAP-values/blob/master/Four%20sampling%20strategies%20used%20in%20this%20project.png" height=50% width=50% alt="Smpling strategites">
 </p>
 
 ========================= Oversampling ============================  
