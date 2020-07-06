@@ -33,7 +33,7 @@ dem|DEM|                                         aspect|aspect
 ## Model building and selection
 The present example of machine learning modelling was created on the basis of spatial data from Inner Mongolia (China). we use logistic regression as a benchmark model to compare linear and non-linear methods in the simulation of grassland degradation. This model achieves only a low accuracy. The second non-linear (black box model) model was created using XGBoost. It achieved a very high accuracy with four different samplling strategies(see follow section), in both training and simulating process. In this project, due to the limitation of the dataset, we post the model training process. The high accuracy model produced by training process could be used in simulation process.
 <p align="center">
-  <img src="  " height=70% width=70%>
+  <img src="https://github.com/Batunacun2020/XGBoost-SHAP-values/blob/master/Model%20structure.png" height=70% width=70%>
 </p>
 ## Imbalance issue
 The data has an unbalanced distribution for class 0 (no degradation) and class 1 (degradation) of about 10:1 To change this, artificial values were added using a "RandomOverSampler" from the Python package "imblearn".
