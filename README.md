@@ -33,7 +33,7 @@ dem|DEM|                                         aspect|aspect
 ## Model building and selection
 The present example of machine learning modelling was created on the basis of spatial data from Inner Mongolia (China). we use logistic regression as a benchmark model to compare linear and non-linear methods in the simulation of grassland degradation. This model achieves only a low accuracy. The second non-linear (black box model) model was created using XGBoost. It achieved a very high accuracy with four different samplling strategies(see follow section), in both training and simulating process. In this project, due to the limitation of the dataset, we post the model training process. The high accuracy model produced by training process could be used in simulation process. The model building process see following figure.
 <p align="center">
-  <img src="https://github.com/Batunacun2020/XGBoost-SHAP-values/blob/master/Model%20structure.png" height=50% width=50% alt="Model building process">
+  <img src="https://github.com/Batunacun2020/XGBoost-SHAP-values/blob/master/Model%20structure.png" height=450% width=45% alt="Model building process">
 </p>
 
 ## Imbalance issue
@@ -48,7 +48,7 @@ We introduced four different sampling methods in this study.
 **Balanced sampling**: Random data sampling, resulting in equal sized samples.
  
 <p align="center">
-  <img src="https://github.com/Batunacun2020/XGBoost-SHAP-values/blob/master/Four%20sampling%20strategies%20used%20in%20this%20project.png" height=70% width=70% alt="Smpling strategites">
+  <img src="https://github.com/Batunacun2020/XGBoost-SHAP-values/blob/master/Four%20sampling%20strategies%20used%20in%20this%20project.png" height=60% width=60% alt="Smpling strategites">
 </p>
 
 ========================= Oversampling ============================  
@@ -101,7 +101,7 @@ The SHAP values plot combines feature importance (drivers are ordered along the 
 ## Maintainer
 @Batunacun2020
 ## Contributing
-@Ralf Wieland (https://github.com/Ralf3) @Batunacun2020
+@Ralf Wieland (https://github.com/Ralf3)   @Batunacun2020
 ## Reference
 1,Batunacun, Wieland R, Lakes T, Nendel C. 2020. Using SHAP to interpret XGBoost predictions of grassland degradation in Xilingol, China. Geoscientific Model Development Discussions 1–28. DOI: https://doi.org/10.5194/gmd-2020-59  
 2,He H, Garcia EA. 2009. Learning from Imbalanced Data. IEEE Transactions on Knowledge and Data Engineering 21: 1263–1284. DOI: 10.1109/TKDE.2008.239
