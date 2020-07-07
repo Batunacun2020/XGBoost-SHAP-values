@@ -33,7 +33,7 @@ dem|DEM|                                         aspect|aspect
 ## Model building and selection
 The present example of machine learning modelling was created on the basis of spatial data from Inner Mongolia (China). we use logistic regression as a benchmark model to compare linear and non-linear methods in the simulation of grassland degradation. This model achieves only a low accuracy. The second non-linear (black box model) model was created using XGBoost. It achieved a very high accuracy with four different samplling strategies(see follow section), in both training and simulating process. In this project, due to the limitation of the dataset, we post the model training process. The high accuracy model produced by training process could be used in simulation process. The model building process see following figure.
 <p align="center">
-  <img src="https://user-images.githubusercontent.com/67638956/86779623-12040900-c05c-11ea-8949-fdf208de7213.png" height=450% width=45% alt="Model building process">
+  <img src="https://github.com/Batunacun2020/XGBoost-SHAP-values/blob/master/image/Model%20structure.png" height=450% width=45% alt="Model building process">
 </p>
 
 ## Imbalance issue
@@ -48,7 +48,7 @@ We introduced four different sampling methods in this study.
 **Balanced sampling**: Random data sampling, resulting in equal sized samples.
  
 <p align="center">
-  <img src="https://user-images.githubusercontent.com/67638956/86779677-1d573480-c05c-11ea-8d0a-3c6fb020b35e.png" height=50% width=50% alt="Smpling strategites">
+  <img src="https://github.com/Batunacun2020/XGBoost-SHAP-values/blob/master/image/Four%20sampling%20strategies%20used%20in%20this%20project.png" height=50% width=50% alt="Smpling strategites">
 </p>
 
 ========================= Oversampling ============================  
@@ -83,7 +83,7 @@ SHAP values as a statistical method use used in this project to sort the driverâ
 
 This example software is part of my research work in Germany at Zalf MÃ¼ncheberg and is aimed at stimulating the study of the methodology of machine learning.
 <p align="center">
-  <img src="https://user-images.githubusercontent.com/67638956/86779728-2e07aa80-c05c-11ea-84cd-3723e425b4fa.png"  height=80% width=80% title="SHAP values" alt="Decomposed SHAP values of each point">
+  <img src="https://github.com/Batunacun2020/XGBoost-SHAP-values/blob/master/image/Decomposed%20SHAP%20values.png"  height=80% width=80% title="SHAP values" alt="Decomposed SHAP values of each point">
 </p>
 
 ## Model results
@@ -94,7 +94,7 @@ The SHAP values plot combines feature importance (drivers are ordered along the 
 ### Drivers interpretation
 ============================== SHAP ===============================  
 <p align="center">
-  <img src="https://user-images.githubusercontent.com/67638956/86779743-306a0480-c05c-11ea-8c5a-a4dc3739fd7c.png" height=60% width=60% title="SHAP values" alt="SHAP values">
+  <img src="https://github.com/Batunacun2020/XGBoost-SHAP-values/blob/master/image/SHAPvalues.png" height=60% width=60% title="SHAP values" alt="SHAP values">
 </p>
 
 
