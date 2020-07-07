@@ -1,19 +1,21 @@
 # XGBoost-SHAP-values： Prediction of grassland degradation
 
 ## Background
-This project aims to simulating and predicting grassland degradation by using Machine Learning method-XGBoost.
+This project aims to simulating and predicting grassland degradation by using Machine Learning method, XGBoost.
 SHAP values was used to "crack the black model", XGBoost. SHAP values were useful for analysing the complex relationship between the different drivers of grassland degradation. 
 ### Objectives
-From 2000 to 2015, about 10.2% of the total area has experienced grassland degradation. We are primarily interested in learning whether ML models can achieve a better predictive quality than linear methods, in addition to improving our understanding of how grassland degrades in Xilingol. The objects in this project as following:  
+Xilingol located in Inner Mongolia, China, is a good case study for simulating grassland degradation due to its typical grassland. 
+From 2000 to 2015, about 10.2% of the total area in Xilingol, has experienced grassland degradation. We are primarily interested in learning whether ML models can achieve a better predictive quality than linear methods, in addition to improving our understanding of how grassland degrades in Xilingol. The objects in this project as following:  
 (1) Can machine learning models achieve a better predictive quality than linear methods?  
 (2) How can we open the nonlinear relationships of the black box model? 
+Based on this objects, we organized a ML model, using SHAP values to interpret the complex reslts that produced from the XGBoost model.
 ### Related publication
-This project has been published on "Geoscientific Model Development", please check the link to download it: https://gmd.copernicus.org/preprints/gmd-2020-59/#discussion
+This project has been published on the journal of "Geoscientific Model Development", please check the link to download it: https://gmd.copernicus.org/preprints/gmd-2020-59/#discussion
 ## Install
 Please check the install.txt. 
 ## Data collection
-In line with previous studies, A total of 20 (include one policy proxy variable) drivers were used in this project to simulating grassland degradation in Xilingol.
-The data used in this project please check "dataImbalance.csv"
+In line with previous studies, a total of 20 (include one policy proxy variable) drivers were used in this project to simulating grassland degradation in Xilingol.
+The data used in this project please check data file.
 ### Drvier description
 For example: disdens is the abbreviation of distance to dense grassland, it is euclidean distance that calculated by ArcGIS.
 Disdens is a proxy drivers, that could stand for the existing dense grassland effects and the comprehensitive environment of the dense grassland.
@@ -31,15 +33,14 @@ urban|distance to urban|                          rural|distance to rural area
 dem|DEM|                                         aspect|aspect  
 
 ## Model building and selection
-The present example of machine learning modelling was created on the basis of spatial data from Inner Mongolia (China). we use logistic regression as a benchmark model to compare linear and non-linear methods in the simulation of grassland degradation. This model achieves only a low accuracy. The second non-linear (black box model) model was created using XGBoost. It achieved a very high accuracy with four different samplling strategies(see follow section), in both training and simulating process. In this project, due to the limitation of the dataset, we post the model training process. The high accuracy model produced by training process could be used in simulation process. The model building process see following figure.
+In a bid to create a robust and non-linear model to simulating grassland degradation, two different models were used in this project. One is XGBoost (non-linear model), another is Logistic regression (linear model).The logistic regression as a benchmark in this study. The results indicated that XGBoost outperformed than logistic regression model, in both training and simulation process.In this project, due to the limitation of the dataset, we post the model training process only. The high accuracy model produced by training process could be used in simulation process. We organized the grassland degradation issue as a binary classification task by using ML model.The model building process see following figure.
 <p align="center">
   <img src="https://github.com/Batunacun2020/XGBoost-SHAP-values/blob/master/image/Model%20structure.png" height=450% width=45% alt="Model building process">
 </p>
 
 ## Imbalance issue
-About 10.2% of the total area has experienced grassland degradation. We simulate the grassland degradation as a binary classification task by using ML model.
-The data has an unbalanced distribution for class 0 (non degradation, 90% of the total area) and class 1 (degradation, 10% of total area) of about 9:1. In machine learning group, the unevenly distributed  data generally led to overfitting or lost of important information. In a bid to avoid bias, differenet samplling strategies should be imported.  The sampling method generally includes balanced and imbalanced sample strategies. In this study, we tested various balanced sampling strategies to identify the most suitable one. Canonical ML algorithms assume that data is roughly balanced in different classes.In real situations, however, the data is usually skewed, and smaller classes often carry more important information and knowledge than larger ones. It is therefore important to develop learning from imbalanced data to build real-world models. 
-
+About 10.2% of the total area has experienced grassland degradation. The data has an unbalanced distribution for class 0 (non degradation, 90% of the total area) and class 1 (degradation, 10% of total area).In real situations, however, the data is usually skewed, and smaller classes often carry more important information and knowledge than larger ones. It is therefore important to develop learning from imbalanced data to build real-world models . 
+For mahcine learning methodology, the unevenly distributed  data led to overfitting or lost of important information. In a bid to avoid bias, differenet samplling strategies should be imported. The sampling method generally includes balanced and imbalanced sample strategies. In this study, we tested various balanced sampling strategies to identify the most suitable one. Canonical ML algorithms assume that data is roughly balanced in different classes.
 ### Smplling stratigies
 We introduced four different sampling methods in this study.  
 **Over-sampling**：Artificial points are added to the minority class of an imbalanced sampling set, making it equal to the majority class and resulting in equal sized samples.  
