@@ -35,22 +35,24 @@ dem|DEM|                                         aspect|aspect
 ## Model selection and validation
 ### Model selection 
 In a bid to create a robust to simulating grassland degradation, two different models were used in this project,  XGBoost (non-linear model) and Logistic regression (linear model).Logistic regression as a benchmark in this study. The results indicated that XGBoost outperformed than logistic regression model, in both training and simulation process.In this project, due to the limitation of the dataset, we post the model training process only. The high accuracy model produced by training process could be used in simulation process. We organized the grassland degradation issue as a binary classification task by using ML model.The model building process was presented in the following figure.
+
 <p align="center">
   <img src="https://github.com/Batunacun2020/XGBoost-SHAP-values/blob/master/image/Model%20structure.png" height=450% width=45% alt="Model building process">
 </p>
+
 ### Model validation
 In this project, a robust model was selected using overall classification accuracy, precision, recall and the kappa index. Accuracy, precision and recall were calculated based on a confusion matrix (CM) (He and Garcia, 2009).
 The results indicated that XGBoost outperformed than logistic regression.
-### Overall classification accuracy (OCA)
-OCA is the correct prediction of NGD and other pixels in the whole region. This indicator was used to evaluate the accuracy of the model.
-**precision**:Precision is the proportion of correctly predicted positive examples (refers to NGD in this study) in all predicted positive examples.  
-**Recall**:Recall is the proportion of correctly predicted positive examples in all observed positive examples (the observed NGD)  
-**Kappa**:Kappa is a popular indicator used to measure the proportion of agreement between observed and simulated data, especially to measure the degree of spatial matching.   
-**The precision-recall curve (PR curve)**:PR curve provides more information about the model’s performance than, for instance, the Receiver Operator Characteristic curve (ROC curve), when applied to skewed data. The PR curve shows the trade-off of precision and recall, and provides a model-wide evaluation.  
-**area under PR, The area under the PR curve (AUC-PR)**:AUC-PR is likewise effective in the classification of model comparisons. 
-**F1 score**,The F1 score can be interpreted as a weighted average of the precision and recall, where an F1 score reaches its best value at 1 and worst score at 0.
-**ROC AUC**,Compute Area Under the Receiver Operating Characteristic Curve (ROC AUC) from prediction scores, ROC curve, is a graphical plot that illustrates the diagnostic ability of a binary classifier system as its discrimination threshold is varied (https://scikit-learn.org/0.21/modules/generated/sklearn.metrics.roc_auc_score.html).
-**F1 score and ROC AUC were not used in our publication, but we posted in here, that maybe useful in other project.**
+### Overall classification accuracy (OCA)  
+OCA is the correct prediction of NGD and other pixels in the whole region. This indicator was used to evaluate the accuracy of the model.  
+**precision**:Precision is the proportion of correctly predicted positive examples (refers to NGD in this study) in all predicted positive examples.    
+**Recall**:Recall is the proportion of correctly predicted positive examples in all observed positive examples (the observed NGD).    
+**Kappa**:Kappa is a popular indicator used to measure the proportion of agreement between observed and simulated data, especially to measure the degree of spatial matching.    
+**The precision-recall curve (PR curve)**:PR curve provides more information about the model’s performance than, for instance, the Receiver Operator Characteristic curve (ROC curve), when applied to skewed data. The PR curve shows the trade-off of precision and recall, and provides a model-wide evaluation.    
+**area under PR, The area under the PR curve (AUC-PR)**:AUC-PR is likewise effective in the classification of model comparisons.   
+**F1 score**,The F1 score can be interpreted as a weighted average of the precision and recall, where an F1 score reaches its best value at 1 and worst score at 0.  
+**ROC AUC**,Compute Area Under the Receiver Operating Characteristic Curve (ROC AUC) from prediction scores, ROC curve, is a graphical plot that illustrates the diagnostic ability of a binary classifier system as its discrimination threshold is varied (https://scikit-learn.org/0.21/modules/generated/sklearn.metrics.roc_auc_score.html).  
+**F1 score and ROC AUC were not used in our publication, but we posted in here, that maybe useful in other project.**  
 
 ====================== LG and XGBoost valdation ========================  
 validation indicators|Logistic Regression validation|XGBoost validation
