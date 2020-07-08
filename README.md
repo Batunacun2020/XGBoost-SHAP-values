@@ -69,13 +69,13 @@ area under PR|0.76| 1.00
 ## Imbalance issue
 About 10.2% of the total area has degraded between 2000 and 2015. The data has an unbalanced distribution for class 0 (non degradation, 90% of the total area) and class 1 (degradation, 10% of total area).In real situations, the data is usually skewed, and smaller classes often carry more important information and knowledge than larger ones. It is therefore important to develop learning from imbalanced data to build real-world models . 
 For mahcine learning methodology, the unevenly distributed  data led to overfitting or lost of important information. In a bid to avoid bias, differenet samplling strategies should be imported. The sampling method generally includes balanced and imbalanced samplling strategies. In this study, we tested various balanced sampling strategies to identify the most suitable one. The following shows how each samplling method refer to.
-### Smplling stratigies
-We introduced four different sampling methods in this study.  
-**Over-sampling**：Artificial points are added to the minority class of an imbalanced sampling set, making it equal to the majority class and resulting in equal sized samples.  
-**Under-sampling**: Points are removed from a majority class of an imbalanced sampling set, making it equal to the minority class and resulting in equal sized samples. 
-**Imbalanced-sampling**: Random data sampling, but with the same share of the sampled class, resulting in unequal sized samples.  
-**Balanced sampling**: Random data sampling, resulting in equal sized samples.
-Over-sampling method was performed slightly better than other three samplling methods.
+### Smplling stratigies  
+We introduced four different sampling methods in this study.    
+**Over-sampling**：Artificial points are added to the minority class of an imbalanced sampling set, making it equal to the majority class and resulting in equal sized samples.    
+**Under-sampling**: Points are removed from a majority class of an imbalanced sampling set, making it equal to the minority class and resulting in equal sized samples.  
+**Imbalanced-sampling**: Random data sampling, but with the same share of the sampled class, resulting in unequal sized samples.      
+**Balanced sampling**: Random data sampling, resulting in equal sized samples.  
+Over-sampling method was performed slightly better than other three samplling methods.  
  
 <p align="center">
   <img src="https://github.com/Batunacun2020/XGBoost-SHAP-values/blob/master/image/Four%20sampling%20strategies%20used%20in%20this%20project.png" height=50% width=50% alt="Smpling strategites">
