@@ -92,14 +92,7 @@ This example software is part of my research work in Germany at Zalf Müncheberg
   <img src="https://github.com/Batunacun2020/XGBoost-SHAP-values/blob/master/image/Decomposed%20SHAP%20values.png"  height=80% width=80% title="SHAP values" alt="Decomposed SHAP values of each point">
 </p>
 
-## Model results
-
-### Drivers selection
-The SHAP values plot combines feature importance (drivers are ordered along the y-axis) and driver effects (SHAP values on the x-axis), which describe the probability of NGD having occurred. Positive SHAP values refer to a higher probability of NGD. The gradient colour represents the feature value from high (red) to low (blue). As the figure shows, disdense was the primary driver for NGD in the study region. The relationship between disdense and NGD is non-linear, which can be seen from the SHAP values being both positive and negative. 
-
-### Drivers interpretation
-The following figure shows that driver effects include both linear-dominated relationships, such as sheep, GDP and others, and non-linear-dominated relations, such as disdense, dismode and others. 
-In addition, the figure shows that the most important drivers for NGD are the changes of distance to dense, moderately dense and sparse grassland, then followed by sheep density and the distance to unused land. 
+c
 <p align="center">
   <img src="https://github.com/Batunacun2020/XGBoost-SHAP-values/blob/master/image/SHAPvalues.png" height=60% width=60% title="SHAP values" alt="SHAP values">
 </p>
