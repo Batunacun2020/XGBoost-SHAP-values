@@ -81,8 +81,9 @@ Over-sampling method was performed slightly better than other three samplling me
 
 ## Open black box model-SHAP values
 SHAP (SHapley Additive exPlanations) is a novel approach to improve our understanding of the complexity of predictive model results and to explore relationships between individual variables for the predicted case (Lundberg and Lee, 2017).
-
-SHAP values as a statistical method use used in this project to sort the driver’s effects, and break down the prediction into individual feature impacts.
+SHAP values in this project to break down the prediction into individual feature impacts, and rank the drivers' effects.
+The following figure is the decomposed SHAP values for the individual prediction of an example pixel.
+Disdens was the dominant dirver for grassland degradation at this pixel.
 
 This example software is part of my research work in Germany at Zalf Müncheberg and is aimed at stimulating the study of the methodology of machine learning.
 <p align="center">
@@ -95,7 +96,8 @@ This example software is part of my research work in Germany at Zalf Müncheberg
 The SHAP values plot combines feature importance (drivers are ordered along the y-axis) and driver effects (SHAP values on the x-axis), which describe the probability of NGD having occurred. Positive SHAP values refer to a higher probability of NGD. The gradient colour represents the feature value from high (red) to low (blue). As the figure shows, disdense was the primary driver for NGD in the study region. The relationship between disdense and NGD is non-linear, which can be seen from the SHAP values being both positive and negative. 
 
 ### Drivers interpretation
-============================== SHAP ===============================  
+The following figure shows that driver effects include both linear-dominated relationships, such as sheep, GDP and others, and non-linear-dominated relations, such as disdense, dismode and others. 
+In addition, the figure shows that the most important drivers for NGD are the changes of distance to dense, moderately dense and sparse grassland, then followed by sheep density and the distance to unused land. 
 <p align="center">
   <img src="https://github.com/Batunacun2020/XGBoost-SHAP-values/blob/master/image/SHAPvalues.png" height=60% width=60% title="SHAP values" alt="SHAP values">
 </p>
@@ -108,5 +110,5 @@ The SHAP values plot combines feature importance (drivers are ordered along the 
 ## Reference
 1,Batunacun, Wieland R, Lakes T, Nendel C. 2020. Using SHAP to interpret XGBoost predictions of grassland degradation in Xilingol, China. Geoscientific Model Development Discussions 1–28. DOI: https://doi.org/10.5194/gmd-2020-59  
 2,He H, Garcia EA. 2009. Learning from Imbalanced Data. IEEE Transactions on Knowledge and Data Engineering 21: 1263–1284. DOI: 10.1109/TKDE.2008.239  
-3, Lundberg S. 2019. A unified approach to explain the output of any machine learning model.: slundberg/shap. Jupyter Notebook. 
+3,Lundberg S. 2019. A unified approach to explain the output of any machine learning model.: slundberg/shap. Jupyter Notebook. 
 
