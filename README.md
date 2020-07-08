@@ -1,24 +1,24 @@
 # XGBoost-SHAP-values： Prediction of grassland degradation
 
 ## Background
-This project aims to simulating and predicting grassland degradation by using Machine Learning method, XGBoost.
+This project aims to simulating and predicting grassland degradation by using Machine Learning (ML) method, XGBoost.
 SHAP values was used to "crack the black model", XGBoost. SHAP values were useful for analysing the complex relationship between the different drivers of grassland degradation. 
 ### Objectives
 Xilingol located in Inner Mongolia, China, is a good case study for simulating grassland degradation due to its typical grassland. 
 From 2000 to 2015, about 10.2% of the total area in Xilingol, has experienced grassland degradation. We are primarily interested in learning whether ML models can achieve a better predictive quality than linear methods, in addition to improving our understanding of how grassland degrades in Xilingol. The objects in this project as following:  
 (1) Can machine learning models achieve a better predictive quality than linear methods?  
 (2) How can we open the nonlinear relationships of the black box model? 
-Based on this objects, we organized a ML model, using SHAP values to interpret the complex reslts that produced from the XGBoost model.
+Based on this objects, we organized a ML model, SHAP to interpret the results of the purely data-driven approach.
 ### Related publication
-This project has been published on the journal of "Geoscientific Model Development", please check the link to download it: https://gmd.copernicus.org/preprints/gmd-2020-59/#discussion
+This project has been published on the journal of "Geoscientific Model Development", please check the link to download it: https://gmd.copernicus.org/preprints/gmd-2020-59/#discuSHAP to interpret the results of the purely data-driven approach.ssion
 ## Install
 Please check the install.txt. 
 ## Data collection
 In line with previous studies, a total of 20 (include one policy proxy variable) drivers were used in this project to simulating grassland degradation in Xilingol.
 The data used in this project please check data file.
 ### Drvier description
-For example: disdens is the abbreviation of distance to dense grassland, it is euclidean distance that calculated by ArcGIS.
-Disdens is a proxy drivers, that could stand for the existing dense grassland effects and the comprehensitive environment of the dense grassland.
+For example: disdens is the of distance to dense grassland, it is euclidean distance that calculated by ArcGIS.
+Disdens is a proxy drivers, could stand for the existing dense grassland effects and the comprehensitive environment of the dense grassland.
 Driver name | Description|Driver name | Description          
 ------------ | --------------|----------- | -------------
 disdens | distance to dense grass|                slope| slope  
@@ -32,12 +32,37 @@ gdp|GDP density|                                 pop|population density
 urban|distance to urban|                          rural|distance to rural area 
 dem|DEM|                                         aspect|aspect  
 
-## Model building and selection
-In a bid to create a robust and non-linear model to simulating grassland degradation, two different models were used in this project. One is XGBoost (non-linear model), another is Logistic regression (linear model).The logistic regression as a benchmark in this study. The results indicated that XGBoost outperformed than logistic regression model, in both training and simulation process.In this project, due to the limitation of the dataset, we post the model training process only. The high accuracy model produced by training process could be used in simulation process. We organized the grassland degradation issue as a binary classification task by using ML model.The model building process see following figure.
+## Model selection and validation
+### Model selection 
+In a bid to create a robust to simulating grassland degradation, two different models were used in this project, One is XGBoost (non-linear model), another is Logistic regression (linear model).The logistic regression as a benchmark in this study. The results indicated that XGBoost outperformed than logistic regression model, in both training and simulation process.In this project, due to the limitation of the dataset, we post the model training process only. The high accuracy model produced by training process could be used in simulation process. We organized the grassland degradation issue as a binary classification task by using ML model.The model building process see following figure.
 <p align="center">
   <img src="https://github.com/Batunacun2020/XGBoost-SHAP-values/blob/master/image/Model%20structure.png" height=450% width=45% alt="Model building process">
 </p>
+### Model validation
+In this project, a robust model was selected using overall classification accuracy, precision, recall and the kappa index. Accuracy, precision and recall were calculated based on a confusion matrix (CM) (He and Garcia, 2009).
+### Overall classification accuracy (OCA)
+OCA is the correct prediction of NGD and other pixels in the whole region. This indicator was used to evaluate the accuracy of the model.
+**precision**:Precision is the proportion of correctly predicted positive examples (refers to NGD in this study) in all predicted positive examples.  
+**Recall**:Recall is the proportion of correctly predicted positive examples in all observed positive examples (the observed NGD)  
+**Kappa**:Kappa is a popular indicator used to measure the proportion of agreement between observed and simulated data, especially to measure the degree of spatial matching.   
+**The precision-recall curve (PR curve)**:PR curve provides more information about the model’s performance than, for instance, the Receiver Operator Characteristic curve (ROC curve), when applied to skewed data. The PR curve shows the trade-off of precision and recall, and provides a model-wide evaluation.  
+**area under PR, The area under the PR curve (AUC-PR)**:AUC-PR is likewise effective in the classification of model comparisons. 
+**F1 score**,The F1 score can be interpreted as a weighted average of the precision and recall, where an F1 score reaches its best value at 1 and worst score at 0.
+**ROC AUC**,Compute Area Under the Receiver Operating Characteristic Curve (ROC AUC) from prediction scores, ROC curve, is a graphical plot that illustrates the diagnostic ability of a binary classifier system as its discrimination threshold is varied (https://scikit-learn.org/0.21/modules/generated/sklearn.metrics.roc_auc_score.html).
+**F1 score and ROC AUC were not used in our publication, but we posted in here, that maybe useful in other project.**
 
+====================== LG and XGBoost valdation ========================  
+validation indicators|Logistic Regression validation|XGBoost validation
+------------ | -------------| -------------
+Testing score|0.69|0.98
+Training score|0.69|0.98
+Testing score1|0.69|0.97
+Testing precision|0.68|0.99
+Testing recall|0.71|0.96
+F1 score|0.69| 0.98
+ROC AUC|0.75| 1.00
+kappa | 0.38|0.96
+area under PR|0.76| 1.00
 ## Imbalance issue
 About 10.2% of the total area has experienced grassland degradation. The data has an unbalanced distribution for class 0 (non degradation, 90% of the total area) and class 1 (degradation, 10% of total area).In real situations, however, the data is usually skewed, and smaller classes often carry more important information and knowledge than larger ones. It is therefore important to develop learning from imbalanced data to build real-world models . 
 For mahcine learning methodology, the unevenly distributed  data led to overfitting or lost of important information. In a bid to avoid bias, differenet samplling strategies should be imported. The sampling method generally includes balanced and imbalanced sample strategies. In this study, we tested various balanced sampling strategies to identify the most suitable one. Canonical ML algorithms assume that data is roughly balanced in different classes.
@@ -57,26 +82,7 @@ Sampling stratiges | sampling size
 ------------ | -------------
 items before over sampling|[(0.0, 18190), (1.0, 1810)]  
 items after over sampling|[(0.0, 18190), (1.0, 18190)]  
-## Model validation
-### Overall classification accuracy (OCA)
-OCA is the correct prediction of NGD and other pixels in the whole region. This indicator was used to evaluate the accuracy of the model.
-**precision**:Precision is the proportion of correctly predicted positive examples (refers to NGD in this study) in all predicted positive examples.  
-**Recall**:Recall is the proportion of correctly predicted positive examples in all observed positive examples (the observed NGD)  
-**Kappa**:Kappa is a popular indicator used to measure the proportion of agreement between observed and simulated data, especially to measure the degree of spatial matching.   
-**The precision-recall curve (PR curve)**:PR curve provides more information about the model’s performance than, for instance, the Receiver Operator Characteristic curve (ROC curve), when applied to skewed data. The PR curve shows the trade-off of precision and recall, and provides a model-wide evaluation.  
-**area under PR, The area under the PR curve (AUC-PR)**:AUC-PR is likewise effective in the classification of model comparisons. 
-====================== LG and XGBoost valdation ========================  
-validation indicators|Logistic Regression validation|XGBoost validation
------------- | -------------| -------------
-Testing score|0.69|0.98
-Training score|0.69|0.98
-Testing score1|0.69|0.97
-Testing precision|0.68|0.99
-Testing recall|0.71|0.96
-F1 score|0.69| 0.98
-ROC AUC|0.75| 1.00
-kappa | 0.38|0.96
-area under PR|0.76| 1.00
+
  
 ## Open black box model-SHAP values
 Furthermore, the SHAP library was used for the statistical analysis of xgb in the methodology presented here. The SHAP allows a detailed analysis of single decisions, the dependencies of two inputs up to the overall analysis of the feature_importance (shap.summary_plot). This was used to determine the four most important influencing variables of the model.
