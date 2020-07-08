@@ -1,16 +1,16 @@
-# XGBoost-SHAP-values： Prediction of grassland degradation
+# XGBoost-SHAP-values：Prediction of grassland degradation
 
 ## Background
 This project aims to simulating and predicting grassland degradation by using Machine Learning (ML) method, XGBoost.
 SHAP values was used to "crack the black model", XGBoost. SHAP values were useful for analysing the complex relationship between the different drivers of grassland degradation. 
 ### Objectives
-Xilingol located in Inner Mongolia, China, is a good case study for simulating grassland degradation due to its typical grassland. 
+Xilingol is located in Inner Mongolia, China, is a good case study for simulating grassland degradation due to its typical grassland. 
 From 2000 to 2015, about 10.2% of the total area in Xilingol, has experienced grassland degradation. We are primarily interested in learning whether ML models can achieve a better predictive quality than linear methods, in addition to improving our understanding of how grassland degrades in Xilingol. The objects in this project as following:  
 (1) Can machine learning models achieve a better predictive quality than linear methods?  
 (2) How can we open the nonlinear relationships of the black box model? 
-Based on this objects, we organized a ML model, SHAP to interpret the results of the purely data-driven approach.
+Based on this objects, A set of twenty drivers was analysed using XGBoost, involving four alternative sampling strategies, and SHAP to interpret the results of the purely data-driven approach. 
 ### Related publication
-This project has been published on the journal of "Geoscientific Model Development", please check the link to download it: https://gmd.copernicus.org/preprints/gmd-2020-59/#discuSHAP to interpret the results of the purely data-driven approach.ssion
+This project has been published on the journal of "Geoscientific Model Development", please check the link to download it: https://gmd.copernicus.org/preprints/gmd-2020-59/#discuSHAP
 ## Install
 Please check the install.txt. 
 ## Data collection
@@ -34,12 +34,13 @@ dem|DEM|                                         aspect|aspect
 
 ## Model selection and validation
 ### Model selection 
-In a bid to create a robust to simulating grassland degradation, two different models were used in this project, One is XGBoost (non-linear model), another is Logistic regression (linear model).The logistic regression as a benchmark in this study. The results indicated that XGBoost outperformed than logistic regression model, in both training and simulation process.In this project, due to the limitation of the dataset, we post the model training process only. The high accuracy model produced by training process could be used in simulation process. We organized the grassland degradation issue as a binary classification task by using ML model.The model building process see following figure.
+In a bid to create a robust to simulating grassland degradation, two different models were used in this project,  XGBoost (non-linear model) and Logistic regression (linear model).Logistic regression as a benchmark in this study. The results indicated that XGBoost outperformed than logistic regression model, in both training and simulation process.In this project, due to the limitation of the dataset, we post the model training process only. The high accuracy model produced by training process could be used in simulation process. We organized the grassland degradation issue as a binary classification task by using ML model.The model building process was presented in the following figure.
 <p align="center">
   <img src="https://github.com/Batunacun2020/XGBoost-SHAP-values/blob/master/image/Model%20structure.png" height=450% width=45% alt="Model building process">
 </p>
 ### Model validation
 In this project, a robust model was selected using overall classification accuracy, precision, recall and the kappa index. Accuracy, precision and recall were calculated based on a confusion matrix (CM) (He and Garcia, 2009).
+The results indicated that XGBoost outperformed than logistic regression.
 ### Overall classification accuracy (OCA)
 OCA is the correct prediction of NGD and other pixels in the whole region. This indicator was used to evaluate the accuracy of the model.
 **precision**:Precision is the proportion of correctly predicted positive examples (refers to NGD in this study) in all predicted positive examples.  
@@ -64,28 +65,23 @@ ROC AUC|0.75| 1.00
 kappa | 0.38|0.96
 area under PR|0.76| 1.00
 ## Imbalance issue
-About 10.2% of the total area has experienced grassland degradation. The data has an unbalanced distribution for class 0 (non degradation, 90% of the total area) and class 1 (degradation, 10% of total area).In real situations, however, the data is usually skewed, and smaller classes often carry more important information and knowledge than larger ones. It is therefore important to develop learning from imbalanced data to build real-world models . 
-For mahcine learning methodology, the unevenly distributed  data led to overfitting or lost of important information. In a bid to avoid bias, differenet samplling strategies should be imported. The sampling method generally includes balanced and imbalanced sample strategies. In this study, we tested various balanced sampling strategies to identify the most suitable one. Canonical ML algorithms assume that data is roughly balanced in different classes.
+About 10.2% of the total area has degraded between 2000 and 2015. The data has an unbalanced distribution for class 0 (non degradation, 90% of the total area) and class 1 (degradation, 10% of total area).In real situations, the data is usually skewed, and smaller classes often carry more important information and knowledge than larger ones. It is therefore important to develop learning from imbalanced data to build real-world models . 
+For mahcine learning methodology, the unevenly distributed  data led to overfitting or lost of important information. In a bid to avoid bias, differenet samplling strategies should be imported. The sampling method generally includes balanced and imbalanced samplling strategies. In this study, we tested various balanced sampling strategies to identify the most suitable one. The following shows how each samplling method refer to.
 ### Smplling stratigies
 We introduced four different sampling methods in this study.  
 **Over-sampling**：Artificial points are added to the minority class of an imbalanced sampling set, making it equal to the majority class and resulting in equal sized samples.  
-**Under-sampling**: Points are removed from a majority class of an imbalanced sampling set, making it equal to the minority class and resulting in equal sized samples.  
+**Under-sampling**: Points are removed from a majority class of an imbalanced sampling set, making it equal to the minority class and resulting in equal sized samples. 
 **Imbalanced-sampling**: Random data sampling, but with the same share of the sampled class, resulting in unequal sized samples.  
 **Balanced sampling**: Random data sampling, resulting in equal sized samples.
+Over-sampling method was performed slightly better than other three samplling methods.
  
 <p align="center">
   <img src="https://github.com/Batunacun2020/XGBoost-SHAP-values/blob/master/image/Four%20sampling%20strategies%20used%20in%20this%20project.png" height=50% width=50% alt="Smpling strategites">
 </p>
 
-========================= Oversampling ============================  
-Sampling stratiges | sampling size
------------- | -------------
-items before over sampling|[(0.0, 18190), (1.0, 1810)]  
-items after over sampling|[(0.0, 18190), (1.0, 18190)]  
-
- 
 ## Open black box model-SHAP values
-Furthermore, the SHAP library was used for the statistical analysis of xgb in the methodology presented here. The SHAP allows a detailed analysis of single decisions, the dependencies of two inputs up to the overall analysis of the feature_importance (shap.summary_plot). This was used to determine the four most important influencing variables of the model.
+SHAP (SHapley Additive exPlanations) is a novel approach to improve our understanding of the complexity of predictive model results and to explore relationships between individual variables for the predicted case (Lundberg and Lee, 2017).
+
 SHAP values as a statistical method use used in this project to sort the driver’s effects, and break down the prediction into individual feature impacts.
 
 This example software is part of my research work in Germany at Zalf Müncheberg and is aimed at stimulating the study of the methodology of machine learning.
@@ -111,5 +107,6 @@ The SHAP values plot combines feature importance (drivers are ordered along the 
 @Ralf Wieland (https://github.com/Ralf3)   @Batunacun2020
 ## Reference
 1,Batunacun, Wieland R, Lakes T, Nendel C. 2020. Using SHAP to interpret XGBoost predictions of grassland degradation in Xilingol, China. Geoscientific Model Development Discussions 1–28. DOI: https://doi.org/10.5194/gmd-2020-59  
-2,He H, Garcia EA. 2009. Learning from Imbalanced Data. IEEE Transactions on Knowledge and Data Engineering 21: 1263–1284. DOI: 10.1109/TKDE.2008.239
+2,He H, Garcia EA. 2009. Learning from Imbalanced Data. IEEE Transactions on Knowledge and Data Engineering 21: 1263–1284. DOI: 10.1109/TKDE.2008.239  
+3, Lundberg S. 2019. A unified approach to explain the output of any machine learning model.: slundberg/shap. Jupyter Notebook. 
 
