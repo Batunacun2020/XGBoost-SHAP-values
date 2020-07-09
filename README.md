@@ -85,8 +85,6 @@ The general idea of introducing SHAP values as a further tool to analyse XGBoost
 The following figure shows the decomposed SHAP values for the individual prediction of an example pixel.
 Disdens was the dominant driver for grassland degradation at this pixel.
 
-
-This example software is part of my research work in Germany at Zalf Müncheberg and is aimed at stimulating the study of the methodology of machine learning.
 <p align="center">
   <img src="https://github.com/Batunacun2020/XGBoost-SHAP-values/blob/master/image/Decomposed%20SHAP%20values.png"  height=80% width=80% title="SHAP values" alt="Decomposed SHAP values of each point">
 </p>
