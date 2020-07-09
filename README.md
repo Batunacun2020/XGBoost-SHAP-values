@@ -43,7 +43,7 @@ In a bid to create a robust model to simulating grassland degradation, two diffe
 ### Model validation
 In this project, a robust model was selected using overall classification accuracy, precision, recall and the kappa index. Accuracy, precision and recall were calculated based on a confusion matrix (CM) (He and Garcia, 2009).  
 The following table indicates that XGBoost outperformed logistic regression models.  
-**OCA**: is the correct prediction of NGD and other pixels in the whole region. This indicator was used to evaluate the accuracy of the model.    
+**Overall classification accuracy (OCA)**: is the correct prediction of NGD and other pixels in the whole region. This indicator was used to evaluate the accuracy of the model.    
 **Precision**: refers to the proportion of correctly predicted positive examples in all predicted positive examples.      
 **Recall**: refers to the proportion of correctly predicted positive examples in all observed positive examples (the observed NGD).      
 **Kappa**: refers to a popular indicator used to measure the proportion of agreement between observed and simulated data, especially to measure the degree of spatial matching.      
