@@ -1,6 +1,6 @@
 # XGBoost-SHAP-values：Prediction of grassland degradation
 
-## Background
+## Background  
 This project aims at simulating and predicting grassland degradation by using Machine Learning (ML) method, XGBoost.
 SHAP values was used to "crack the black model", XGBoost. SHAP values were useful for analysing the complex relationship between different drivers of grassland degradation. 
 ### Objectives
