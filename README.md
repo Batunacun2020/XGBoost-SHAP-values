@@ -18,7 +18,7 @@ In line with previous studies, a total of 20  drivers (including one policy prox
 Please check the data file (data.csv) for the data used in this project.
 ### Drvier description
 For example: disdens is the Euclidean distance to dense grassland, calculated by ArcGIS.  
-Disdens is a proxy driver, which represents the effects of dense grasslands and their comprehensive environment.  
+Disdens is a proxy driver, which represents the effects of dense grassland and its comprehensive environment.  
 Driver name | Description|Driver name | Description          
 ------------ | --------------|----------- | -------------
 disdens | distance to dense grass|                slope| slope  
