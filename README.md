@@ -51,7 +51,7 @@ The following table indicates that XGBoost outperformed logistic regression mode
 **area under PR, The area under the PR curve (AUC-PR)**: AUC-PR is likewise effective in the classification of model comparisons.     
 **F1 score**: The F1 score can be interpreted as a weighted average of the precision and recall, where an F1 score reaches its best value at 1 and worst score at 0.    
 **ROC AUC**: Compute Area Under the Receiver Operating Characteristic Curve (ROC AUC) from prediction scores. ROC curve is a graphical plot that illustrates the diagnostic ability of a binary classifier system based on a discrimination threshold (https://scikit-learn.org/0.21/modules/generated/sklearn.metrics.roc_auc_score.html).    
-**F1 score and ROC AUC were not used in our publication, but we listed these methods here as it can be useful for other projects. **
+**F1 score and ROC AUC were not used in our publication, but we listed these methods here as it can be useful for other projects.**
 
 ====================== LG and XGBoost valdation ========================  
 validation indicators|Logistic Regression validation|XGBoost validation
@@ -72,7 +72,7 @@ We used four different sampling methods in this study.
 **Over-sampling**: Artificial points are added to the minority class of an imbalanced sampling set, making it equal to the majority class and resulting in equal sample sizes.      
 **Under-sampling**: Points are removed from a majority class of an imbalanced sampling set, making it equal to the minority class and resulting in equal sample sizes.    
 **Imbalanced-sampling**: Random data sampling, but with the same share of the sampled class, resulting in unequal sample sizes.        
-**Balanced sampling**: Random data sampling, resulting in equal sample sizes.    
+**Balanced-sampling**: Random data sampling, resulting in equal sample sizes.    
 Over-sampling method performed slightly better than the other three sampling methods.   
  
 <p align="center">
